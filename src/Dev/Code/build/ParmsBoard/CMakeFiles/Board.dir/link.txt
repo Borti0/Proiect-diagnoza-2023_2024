@@ -1,0 +1,2 @@
+C:\VSARM\armcc\102021~1.10\bin\ARM-NO~2.EXE qc libBoard.a CMakeFiles/Board.dir/Board.cpp.obj
+C:\VSARM\armcc\102021~1.10\bin\AR17F9~1.EXE libBoard.a

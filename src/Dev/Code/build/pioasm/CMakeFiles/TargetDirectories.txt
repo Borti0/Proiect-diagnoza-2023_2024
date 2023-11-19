@@ -1,0 +1,3 @@
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/pioasm/CMakeFiles/pioasm.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/pioasm/CMakeFiles/edit_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/pioasm/CMakeFiles/rebuild_cache.dir

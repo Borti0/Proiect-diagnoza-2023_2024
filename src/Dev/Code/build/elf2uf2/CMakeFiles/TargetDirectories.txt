@@ -1,0 +1,5 @@
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/elf2uf2/CMakeFiles/elf2uf2.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/elf2uf2/CMakeFiles/edit_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/elf2uf2/CMakeFiles/rebuild_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
