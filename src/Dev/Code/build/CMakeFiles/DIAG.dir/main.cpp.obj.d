@@ -29,19 +29,29 @@ CMakeFiles/DIAG.dir/main.cpp.obj: \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\sched.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\types.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\stdio.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\stdlib.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\cstdlib \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\c++config.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\os_defines.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\cpu_defines.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\pstl\pstl_config.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\stdlib.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\stdlib.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\alloca.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\bits\std_abs.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\time.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\time.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\_locale.h \
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\tempsensor\tempsensor.hpp \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\string.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\strings.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\string.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/assert.h \
  c:\vsarm\armcc\102021~1.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\cassert \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\c++config.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\os_defines.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v6-m\nofp\bits\cpu_defines.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\pstl\pstl_config.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\assert.h \
  c:\vsarm\armcc\102021~1.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\stdint.h \
@@ -81,11 +91,6 @@ CMakeFiles/DIAG.dir/main.cpp.obj: \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\include/hardware/adc.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/adc.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/adc.h \
- c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\tempsensor\tempsensor.hpp \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\stdlib.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\cstdlib \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\stdlib.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\stdlib.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\alloca.h \
- c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\bits\std_abs.h \
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp \
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\tempsensor\SensorMap.hpp \
  c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp

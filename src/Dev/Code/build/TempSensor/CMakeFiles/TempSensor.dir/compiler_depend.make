@@ -1608,6 +1608,10 @@ TempSensor/CMakeFiles/TempSensor.dir/TempSensor.cpp.obj: ../TempSensor/TempSenso
   C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/machine/stdlib.h \
   C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/alloca.h \
   C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/string.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/_locale.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/strings.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/string.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -1653,7 +1657,8 @@ TempSensor/CMakeFiles/TempSensor.dir/TempSensor.cpp.obj: ../TempSensor/TempSenso
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h \
-  ../ParmsBoard/Board.hpp
+  ../ParmsBoard/Board.hpp \
+  ../TempSensor/SensorMap.hpp
 
 
 C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/c++/10.3.1/cassert:
@@ -1975,6 +1980,8 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c:
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h:
+
+../TempSensor/SensorMap.hpp:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c:
 

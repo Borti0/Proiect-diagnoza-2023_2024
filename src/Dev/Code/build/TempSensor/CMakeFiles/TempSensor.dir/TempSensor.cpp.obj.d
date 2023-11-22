@@ -40,6 +40,10 @@ TempSensor/CMakeFiles/TempSensor.dir/TempSensor.cpp.obj: \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\stdlib.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\alloca.h \
  c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\c++\10.3.1\bits\std_abs.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\string.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\_locale.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\strings.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\string.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
@@ -85,4 +89,5 @@ TempSensor/CMakeFiles/TempSensor.dir/TempSensor.cpp.obj: \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\include/hardware/adc.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/adc.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/adc.h \
- c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp \
+ C:\Users\Vlad\Documents\Diagnoza-project\Proiect-diagnoza-2023_2024\src\Dev\Code\TempSensor\SensorMap.hpp

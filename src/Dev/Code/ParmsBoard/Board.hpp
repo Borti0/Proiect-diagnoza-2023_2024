@@ -21,4 +21,6 @@
     (voltage*Rb)/ (VDD - voltage)\
     )
 
+#define __RES_TO_TEMP__(RES, RES0, RES1, TEMP0, TEMP1) ( TEMP1 + ( ((RES - RES1) * (TEMP1 - TEMP0)) / (RES1 - RES0)))
+
 #endif
