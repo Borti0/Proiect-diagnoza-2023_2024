@@ -3,7 +3,7 @@
 GenericAnalogTempSensor::GenericAnalogTempSensor()
 {
     this->adc_gpio = ADC_OFFSET_GPIO;
-    this->adc_nr_channel = ADC_OFFSET_GPIO;
+    this->adc_nr_channel = ADC_CH1;
 
     adc_init();
     adc_gpio_init(this->adc_gpio);
@@ -55,12 +55,18 @@ void TempSensor::__fint_interva_limits(float resistance)
     /*
     out of range check dtc
     */
-    if(local_resistace < this->mem_table[0].resistace || local_resistace > this->mem_table[this->len_mem_table].resistace)
+    if(local_resistace < this->mem_table[0].resistace)
     {
-        this->_temp_sensor_dtc_ = TEMP_SENSOR_OOF;
+        this->_temp_sensor_dtc_ = TEMP_SENSOR_OOF_HIGH;
         return;
     }
 
+    if(local_resistace > this->mem_table[this->len_mem_table-1].resistace)
+    {
+        this->_temp_sensor_dtc_ = TEMP_SENSOR_OOF_LOW;
+        return;
+    }
+    
     /*
     check interval
     */
@@ -78,8 +84,7 @@ void TempSensor::__fint_interva_limits(float resistance)
 
 float TempSensor::ReadTempAsResistance(void)
 {
-    this->CheckChannelSensor();
-    return __VOLTAGE_TO_RES(__SAMPLE_TO_VOLTEGE__((float)adc_read()));
+    return __VOLTAGE_TO_RES(this->ReadTempAsVoltage());
 }
 
 float TempSensor::ReadTempAsCelsius(void)
@@ -87,9 +92,8 @@ float TempSensor::ReadTempAsCelsius(void)
     float temperature = 0.0f;
     float resistance = 0.0f;
 
-    this->CheckChannelSensor();
-
     resistance = this->ReadTempAsResistance();
+
     this->__fint_interva_limits(resistance);
 
     temperature = __RES_TO_TEMP__ (
@@ -108,16 +112,32 @@ void TempSensor::show_map(void)
     printf("Sensor mem table [index: R - T]\n");
     for(unsigned int index = 0; index < this->len_mem_table; index++)
     {
-        printf("%f: %f - %f\n", index, this->mem_table[index].resistace, this->mem_table[index].temperature_celsius);
+        printf("%d: %f - %f\n", index, this->mem_table[index].resistace, this->mem_table[index].temperature_celsius);
     }
     printf("\n");
 
     return;
 }
 
+void TempSensor::show_limits(void)
+{
+    printf("Temperature interval [index: R - T]\n");
+    for(unsigned int index = 0; index < LEN_INTERVAL; index++)
+    {
+        printf("%d: %f - %f\n", index, this->mem_table_interval[index].resistace, this->mem_table_interval[index].temperature_celsius);
+    }
+    printf("\n");
+    return;
+}
+
 unsigned int TempSensor::get_len_map(void)
 {
     return this->len_mem_table;
+}
+
+unsigned int TempSensor::get_dtc(void)
+{
+    return this->_temp_sensor_dtc_;
 }
 
 TempSensor::~TempSensor()

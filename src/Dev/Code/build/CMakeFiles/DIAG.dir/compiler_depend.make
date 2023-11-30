@@ -1692,6 +1692,50 @@ CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
   C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h
 
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  C:/VSARM/armcc/10\ 2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/assert.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/_ansi.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/newlib.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/_newlib_version.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/config.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/machine/ieeefp.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/features.h \
+  C:/VSARM/armcc/10\ 2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/stdint.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/machine/_default_types.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/_intsup.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/_stdint.h \
+  C:/VSARM/armcc/10\ 2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/boards/include/boards/pico.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/sys/cdefs.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
+
 CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
@@ -2969,7 +3013,12 @@ CMakeFiles/DIAG.dir/main.cpp.obj: ../main.cpp \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h \
   ../ParmsBoard/Board.hpp \
   ../TempSensor/SensorMap.hpp \
-  ../ParmsBoard/Board.hpp
+  ../ParmsBoard/Board.hpp \
+  ../TaskScheguler/TaskScheguler.hpp \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/rtc.h \
+  C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/include/pico/util/datetime.h
 
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
@@ -3178,6 +3227,8 @@ C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c:
 
 C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/math.h:
 
+C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/rtc.h:
+
 C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
 
 C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
@@ -3300,6 +3351,8 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clock
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h:
 
+C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h:
+
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h:
@@ -3345,6 +3398,10 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c:
+
+C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
+
+C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
 
@@ -3439,3 +3496,5 @@ C:/VSARM/armcc/10\ 2021.10/arm-none-eabi/include/machine/time.h:
 ../TempSensor/TempSensor.hpp:
 
 ../ParmsBoard/Board.hpp:
+
+../TaskScheguler/TaskScheguler.hpp:

@@ -116,6 +116,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/include"
   "C:/VSARM/sdk/pico/pico-sdk/src/common/pico_usb_reset_interface/include"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/include"
+  "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/include"
   )
 
 # The set of dependency files which are needed:
@@ -154,6 +155,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
+  "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" "gcc" "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d"
@@ -185,6 +187,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TempSensor/CMakeFiles/TempSensor.dir/DependInfo.cmake"
   "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/ParmsBoard/CMakeFiles/Board.dir/DependInfo.cmake"
+  "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/CMakeFiles/TaskScheguler.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

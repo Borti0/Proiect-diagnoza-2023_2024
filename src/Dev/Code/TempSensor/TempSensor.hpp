@@ -7,7 +7,7 @@
 
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
-#include "hardware/gpio.h"
+//#include "hardware/gpio.h"
 
 //#include "../types.hpp"
 #include "../ParmsBoard/Board.hpp"
@@ -17,9 +17,12 @@
 
 #define LEN_INTERVAL 2
 
+#define TEMP_SENSOR_OK              0x00
 #define TEMP_SENSOR_MEMORY_DTC      0x01
-#define TEMP_SENSOR_OOF             0x02
-#define TEMP_SENSOR_TEMP_LOW_DTC    0x03
+#define TEMP_SENSOR_OOF_HIGH        0x02
+#define TEMP_SENSOR_OOF_LOW         0x03
+#define TEMP_SENSOR_TEMP_LOW_DTC    0x04
+#define TEMP_SENSOR_GRAPH_TO_SHOR   0x05
 
 class GenericAnalogTempSensor
 {
@@ -51,11 +54,11 @@ private:
 
     void __fint_interva_limits(float resistance);
 
-    unsigned int _temp_sensor_dtc_ = 0;
+    unsigned int _temp_sensor_dtc_ = TEMP_SENSOR_OK;
 
 public:
 
-    TempSensor(unsigned int adc_ch, graph_point_t * graph_table) : GenericAnalogTempSensor(adc_ch)
+    TempSensor(unsigned int adc_ch, graph_point_t * graph_table, unsigned int len_graph) : GenericAnalogTempSensor(adc_ch)
     {
         this->mem_table = graph_table;
         if(!this->mem_table)
@@ -64,7 +67,12 @@ public:
             return;
         }   
 
-        this->len_mem_table = __NEL__(this->mem_table);
+        this->len_mem_table = len_graph;
+        if(this->len_mem_table <= 1)
+        {
+            this->_temp_sensor_dtc_ = TEMP_SENSOR_GRAPH_TO_SHOR;
+            return;
+        }
 
         this->mem_table_interval = (graph_point_t *)malloc(LEN_INTERVAL * sizeof(graph_point_t));
         
@@ -85,7 +93,10 @@ public:
     float ReadTempAsCelsius(void);
 
     void show_map(void);
+    void show_limits(void);
+    
     unsigned int get_len_map(void);
+    unsigned int get_dtc(void);
 };
 
 

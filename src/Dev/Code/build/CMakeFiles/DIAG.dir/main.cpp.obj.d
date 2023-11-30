@@ -93,4 +93,9 @@ CMakeFiles/DIAG.dir/main.cpp.obj: \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/adc.h \
  c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp \
  c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\tempsensor\SensorMap.hpp \
- c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\parmsboard\board.hpp \
+ c:\users\vlad\documents\diagnoza-project\proiect-diagnoza-2023_2024\src\dev\code\taskscheguler\taskscheguler.hpp \
+ C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\include/hardware/rtc.h \
+ C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/rtc.h \
+ C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/rtc.h \
+ C:\VSARM\sdk\pico\pico-sdk\src\common\pico_util\include/pico/util/datetime.h
