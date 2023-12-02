@@ -70,16 +70,6 @@ TaskScheguler_Status_t read_time_task(void *params)
     return var;
 }
 
-volatile unsigned int counter = 0;
-bool timer_callback(struct repeating_timer *timer)
-{
-    printf("\n\n ... I Generate AN IQR ... \n\n");
-    counter++;
-    if(counter == 3)
-        counter = 0;
-    return true;
-}
-
 /*
 gpio_callback()
 {
@@ -98,10 +88,9 @@ int main(void)
 {
 
     stdio_init_all();
-    sleep_ms(10000);
+    sleep_ms(5000);
 
     printf("start test\n");
-
 
     datetime_t rtc_time_old;
     rtc_time_old.year = 2023;
@@ -125,19 +114,17 @@ int main(void)
 
     temp_sensor.show_map();
 
-    
-    TaskScheguler Tasks(TASK_POOL_LEN, (unsigned int *)&counter);
+    sleep_ms(100);
+
+    TaskScheguler Tasks(2, 2);
 
     int arg2 = 20;
 
-    printf("%d task 1 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&read_temp_task, &temp_sensor));
-    printf("%d task 2 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&check_conditions, &arg2));
-    printf("%d task 2 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&read_time_task, &rtc_time_old));
+    printf("%d task 1 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&read_temp_task, &temp_sensor, REPETABLE, 0));
+    printf("%d task 2 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&check_conditions, &arg2, REPETABLE, 0));
+    printf("%d task 2 atach\n",Tasks.attach_task((TaskScheguler_Status_t *)&read_time_task, &rtc_time_old, REPETABLE, 0));
 
-    sleep_ms(1000);
-
-    struct repeating_timer timer;
-    add_repeating_timer_ms(1, timer_callback, NULL, &timer);
+    sleep_ms(100);
 
     TaskScheguler_Status_t val;
 
@@ -146,7 +133,7 @@ int main(void)
 
     while(1)
     {
-        val = Tasks.execute_task(counter);
+        val = Tasks.execute_tasks();
         arg2++;
         printf("return value is %d\n", val.done_execution);
         
