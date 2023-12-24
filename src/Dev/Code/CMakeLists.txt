@@ -19,15 +19,19 @@ add_executable(${PROJECT_NAME}
 
 add_subdirectory(TempSensor)
 add_subdirectory(ParmsBoard)
+add_subdirectory(TaskScheguler)
+add_subdirectory(DigitalSignals)
 target_link_libraries(${PROJECT_NAME} TempSensor)
 target_link_libraries(${PROJECT_NAME} Board)
+target_link_libraries(${PROJECT_NAME} TaskScheguler)
+target_link_libraries(${PROJECT_NAME} DigitalSignals)
 
 # Create map/bin/hex/uf2 files
 pico_add_extra_outputs(${PROJECT_NAME})
 
 # Link to pico_stdlib (gpio, time, etc. functions)
 target_link_libraries(${PROJECT_NAME} 
-    pico_stdlib hardware_adc hardware_gpio
+    pico_stdlib hardware_adc hardware_gpio hardware_rtc
 )
 
 # Enable usb output, disable uart output

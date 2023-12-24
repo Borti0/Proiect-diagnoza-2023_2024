@@ -21,4 +21,11 @@
     (voltage*Rb)/ (VDD - voltage)\
     )
 
+#define __RES_TO_TEMP__(RES, RES0, RES1, TEMP0, TEMP1) ( TEMP1 + ( ((RES - RES1) * (TEMP1 - TEMP0)) / (RES1 - RES0)))
+
+#define KL15_GPIO   22 //in
+#define VSS_GPIO    21 //in
+#define DEBUG_GPIO  25 //out
+#define DTC_GPIO    20 //out
+
 #endif

@@ -245,6 +245,32 @@ Board/fast:
 	$(MAKE) $(MAKESILENT) -f ParmsBoard\CMakeFiles\Board.dir\build.make ParmsBoard/CMakeFiles/Board.dir/build
 .PHONY : Board/fast
 
+#=============================================================================
+# Target rules for targets named TaskScheguler
+
+# Build rule for target.
+TaskScheguler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TaskScheguler
+.PHONY : TaskScheguler
+
+# fast build rule for target.
+TaskScheguler/fast:
+	$(MAKE) $(MAKESILENT) -f TaskScheguler\CMakeFiles\TaskScheguler.dir\build.make TaskScheguler/CMakeFiles/TaskScheguler.dir/build
+.PHONY : TaskScheguler/fast
+
+#=============================================================================
+# Target rules for targets named DigitalSignals
+
+# Build rule for target.
+DigitalSignals: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DigitalSignals
+.PHONY : DigitalSignals
+
+# fast build rule for target.
+DigitalSignals/fast:
+	$(MAKE) $(MAKESILENT) -f DigitalSignals\CMakeFiles\DigitalSignals.dir\build.make DigitalSignals/CMakeFiles/DigitalSignals.dir/build
+.PHONY : DigitalSignals/fast
+
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1077,6 +1103,30 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+
+# target to build an object file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+
+# target to preprocess a source file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
+
+# target to generate assembly for a file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
 
@@ -1765,6 +1815,8 @@ help:
 	@echo ... cyw43_firmware_package
 	@echo ... Board
 	@echo ... DIAG
+	@echo ... DigitalSignals
+	@echo ... TaskScheguler
 	@echo ... TempSensor
 	@echo ... bs2_default
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -1871,6 +1923,9 @@ help:
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s

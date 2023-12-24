@@ -1037,6 +1037,20 @@ CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	C:\VSARM\armcc\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\adc.c -o CMakeFiles\DIAG.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\adc.c.s
 
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: CMakeFiles/DIAG.dir/flags.make
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: CMakeFiles/DIAG.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Vlad\Documents\Diagnoza-project\Proiect-diagnoza-2023_2024\src\Dev\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj"
+	C:\VSARM\armcc\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj -MF CMakeFiles\DIAG.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.obj.d -o CMakeFiles\DIAG.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c
+
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i"
+	C:\VSARM\armcc\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c > CMakeFiles\DIAG.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.i
+
+CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s"
+	C:\VSARM\armcc\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c -o CMakeFiles\DIAG.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.s
+
 # Object files for target DIAG
 DIAG_OBJECTS = \
 "CMakeFiles/DIAG.dir/main.cpp.obj" \
@@ -1108,7 +1122,8 @@ DIAG_OBJECTS = \
 "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" \
 "CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
-"CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
+"CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj" \
+"CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj"
 
 # External object files for target DIAG
 DIAG_EXTERNAL_OBJECTS =
@@ -1183,13 +1198,17 @@ DIAG.elf: CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix
 DIAG.elf: CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 DIAG.elf: CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 DIAG.elf: CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+DIAG.elf: CMakeFiles/DIAG.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
 DIAG.elf: CMakeFiles/DIAG.dir/build.make
 DIAG.elf: TempSensor/libTempSensor.a
+DIAG.elf: ParmsBoard/libBoard.a
+DIAG.elf: TaskScheguler/libTaskScheguler.a
+DIAG.elf: DigitalSignals/libDigitalSignals.a
 DIAG.elf: ParmsBoard/libBoard.a
 DIAG.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 DIAG.elf: CMakeFiles/DIAG.dir/objects1.rsp
 DIAG.elf: CMakeFiles/DIAG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Vlad\Documents\Diagnoza-project\Proiect-diagnoza-2023_2024\src\Dev\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking CXX executable DIAG.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Vlad\Documents\Diagnoza-project\Proiect-diagnoza-2023_2024\src\Dev\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking CXX executable DIAG.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\DIAG.dir\link.txt --verbose=$(VERBOSE)
 	"C:\VSARM\armcc\10 2021.10\bin\arm-none-eabi-objcopy.exe" -Oihex C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DIAG.elf DIAG.hex
 	"C:\VSARM\armcc\10 2021.10\bin\arm-none-eabi-objcopy.exe" -Obinary C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DIAG.elf DIAG.bin
