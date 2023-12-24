@@ -84,11 +84,42 @@ gpio_callback()
 }
 */
 
+void callback(uint gpio_nr)
+{
+    printf("test\n");
+    switch (gpio_nr)
+    {
+    case 22:
+        printf("kl15 changed\n");
+        break;
+    case 21::
+        printf("vss changed\n");
+        break;
+    
+    default:
+        break;
+    }
+
+    return;
+}
+
 int main(void)
 {
 
     stdio_init_all();
     sleep_ms(5000);
+
+    gpio_init(22);
+    gpio_init(21);
+    gpio_set_dir(22, GPIO_IN);
+    gpio_set_dir(21, GPIO_IN);
+
+    gpio_pull_up(22);
+    gpio_pull_up(21);
+
+    gpio_set_irq_enabled(22, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true);
+    gpio_set_irq_enabled(21, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true);
+    gpio_set_irq_callback(&callback);
 
     printf("start test\n");
 

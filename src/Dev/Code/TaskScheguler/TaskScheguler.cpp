@@ -1,12 +1,7 @@
 #include "./TaskScheguler.hpp"
 
-TaskScheguler::TaskScheguler(unsigned int nr_of_tasks, unsigned int * time_counter)
+TaskScheguler::TaskScheguler(unsigned int nr_of_tasks)
 {
-    if(!time_counter)
-    {
-        this->task_scheduler_dtc = __WRONG_TIME_REFERENCE__;
-        return;
-    }
 
     if(nr_of_tasks <= 1)
     {
@@ -41,7 +36,10 @@ TaskScheguler::~TaskScheguler()
 bool TaskScheguler::attach_task(TaskScheguler_Status_t * task_function, void * arguments)
 {
     if(!task_function)
+    {
+        this->task_scheduler_dtc = __TASK_ATTACH_ERR__;
         return false;
+    }
 
     if(this->attach_index < this->task_queue_len)
     {
@@ -50,8 +48,11 @@ bool TaskScheguler::attach_task(TaskScheguler_Status_t * task_function, void * a
         this->attach_index++;
     }
     else
+    {
+        this->task_scheduler_dtc = __TASK_ATTACH_ERR__;
         return false;
-
+    }
+    
     return true;
 }
 
@@ -60,9 +61,13 @@ TaskScheguler_Status_t TaskScheguler::execute_task(unsigned int task_index)
     return this->functions_queue[task_index](this->args_queue[task_index]);
 }
 
+unsigned int TaskScheguler::get_dtc(void)
+{
+    return this->task_scheduler_dtc;
+}
 
 /* TO DO - TEST erase task function */
-
+/*
 bool TaskScheguler::erase_task(unsigned int task_index)
 {
     unsigned int local_task_index = task_index - 1;
@@ -97,3 +102,5 @@ bool TaskScheguler::erase_task(unsigned int task_index)
 
     return true;
 }
+
+*/

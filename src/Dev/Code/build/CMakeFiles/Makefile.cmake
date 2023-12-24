@@ -31,6 +31,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.20/Modules/FindPython/Support.cmake"
   "C:/Program Files/CMake/share/cmake-3.20/Modules/FindPython3.cmake"
   "../CMakeLists.txt"
+  "../DigitalSignals/CMakeLists.txt"
   "../ParmsBoard/CMakeLists.txt"
   "../TaskScheguler/CMakeLists.txt"
   "../TempSensor/CMakeLists.txt"
@@ -232,6 +233,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "TempSensor/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ParmsBoard/CMakeFiles/CMakeDirectoryInformation.cmake"
   "TaskScheguler/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "DigitalSignals/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -247,4 +249,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "TempSensor/CMakeFiles/TempSensor.dir/DependInfo.cmake"
   "ParmsBoard/CMakeFiles/Board.dir/DependInfo.cmake"
   "TaskScheguler/CMakeFiles/TaskScheguler.dir/DependInfo.cmake"
+  "DigitalSignals/CMakeFiles/DigitalSignals.dir/DependInfo.cmake"
   )

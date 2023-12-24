@@ -163,3 +163,6 @@ C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code
 C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/CMakeFiles/edit_cache.dir
 C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/CMakeFiles/TaskScheguler.dir
 C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/CMakeFiles/rebuild_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DigitalSignals/CMakeFiles/edit_cache.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DigitalSignals/CMakeFiles/DigitalSignals.dir
+C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DigitalSignals/CMakeFiles/rebuild_cache.dir

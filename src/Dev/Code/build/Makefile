@@ -258,6 +258,19 @@ TaskScheguler/fast:
 	$(MAKE) $(MAKESILENT) -f TaskScheguler\CMakeFiles\TaskScheguler.dir\build.make TaskScheguler/CMakeFiles/TaskScheguler.dir/build
 .PHONY : TaskScheguler/fast
 
+#=============================================================================
+# Target rules for targets named DigitalSignals
+
+# Build rule for target.
+DigitalSignals: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 DigitalSignals
+.PHONY : DigitalSignals
+
+# fast build rule for target.
+DigitalSignals/fast:
+	$(MAKE) $(MAKESILENT) -f DigitalSignals\CMakeFiles\DigitalSignals.dir\build.make DigitalSignals/CMakeFiles/DigitalSignals.dir/build
+.PHONY : DigitalSignals/fast
+
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1802,6 +1815,7 @@ help:
 	@echo ... cyw43_firmware_package
 	@echo ... Board
 	@echo ... DIAG
+	@echo ... DigitalSignals
 	@echo ... TaskScheguler
 	@echo ... TempSensor
 	@echo ... bs2_default

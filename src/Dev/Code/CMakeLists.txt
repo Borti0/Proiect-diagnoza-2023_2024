@@ -20,9 +20,11 @@ add_executable(${PROJECT_NAME}
 add_subdirectory(TempSensor)
 add_subdirectory(ParmsBoard)
 add_subdirectory(TaskScheguler)
+add_subdirectory(DigitalSignals)
 target_link_libraries(${PROJECT_NAME} TempSensor)
 target_link_libraries(${PROJECT_NAME} Board)
 target_link_libraries(${PROJECT_NAME} TaskScheguler)
+target_link_libraries(${PROJECT_NAME} DigitalSignals)
 
 # Create map/bin/hex/uf2 files
 pico_add_extra_outputs(${PROJECT_NAME})

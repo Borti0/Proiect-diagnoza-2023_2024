@@ -1203,6 +1203,7 @@ DIAG.elf: CMakeFiles/DIAG.dir/build.make
 DIAG.elf: TempSensor/libTempSensor.a
 DIAG.elf: ParmsBoard/libBoard.a
 DIAG.elf: TaskScheguler/libTaskScheguler.a
+DIAG.elf: DigitalSignals/libDigitalSignals.a
 DIAG.elf: ParmsBoard/libBoard.a
 DIAG.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 DIAG.elf: CMakeFiles/DIAG.dir/objects1.rsp

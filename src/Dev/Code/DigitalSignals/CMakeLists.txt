@@ -8,8 +8,7 @@ add_library(${PROJECT_NAME} DigitalSignals.cpp)
 
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 target_link_libraries(${PROJECT_NAME} 
-    pico_stdlib, hardware_gpio
-
+    pico_stdlib hardware_gpio
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../ParmsBoard)

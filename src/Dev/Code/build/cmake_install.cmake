@@ -43,6 +43,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TempSensor/cmake_install.cmake")
   include("C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/ParmsBoard/cmake_install.cmake")
   include("C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/cmake_install.cmake")
+  include("C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DigitalSignals/cmake_install.cmake")
 
 endif()
 

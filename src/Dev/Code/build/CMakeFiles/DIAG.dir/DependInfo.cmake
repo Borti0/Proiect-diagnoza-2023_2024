@@ -188,6 +188,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TempSensor/CMakeFiles/TempSensor.dir/DependInfo.cmake"
   "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/ParmsBoard/CMakeFiles/Board.dir/DependInfo.cmake"
   "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/TaskScheguler/CMakeFiles/TaskScheguler.dir/DependInfo.cmake"
+  "C:/Users/Vlad/Documents/Diagnoza-project/Proiect-diagnoza-2023_2024/src/Dev/Code/build/DigitalSignals/CMakeFiles/DigitalSignals.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
