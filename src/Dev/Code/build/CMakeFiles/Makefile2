@@ -1452,9 +1452,9 @@ pico-sdk/tools/clean:
 # All Build rule for target.
 CMakeFiles/DIAG.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/DIAG.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+CMakeFiles/DIAG.dir/all: DigitalSignals/CMakeFiles/DigitalSignals.dir/all
 CMakeFiles/DIAG.dir/all: TempSensor/CMakeFiles/TempSensor.dir/all
 CMakeFiles/DIAG.dir/all: ParmsBoard/CMakeFiles/Board.dir/all
-CMakeFiles/DIAG.dir/all: DigitalSignals/CMakeFiles/DigitalSignals.dir/all
 CMakeFiles/DIAG.dir/all: TaskScheguler/CMakeFiles/TaskScheguler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/build
