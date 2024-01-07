@@ -20,11 +20,17 @@
 #define TEMP_LOW_LIM -35
 #define KL15_MIN_HIGH 4
 
-#define __DEBUG__ true
+#define __MIN_IN_SEC__  60
+#define __H_IN_SEC__    3600
+
+//#define __DEBUG__ true
+//#define __DEBUG_DTC_RUNNING__ true
+
 
 typedef struct temp_task_args_s
 {
-    datetime_t           * ref_rtc_sensor   = nullptr;
+    unsigned char        * ref_sensor_time  = nullptr; //sorage for time value
+    datetime_t           * ref_rtc_sensor   = nullptr; //as an last read
     app_dtc_conditions_t * ref_dtc_app      = nullptr;
     TempSensor           * ref_sensor       = nullptr;
 }temp_task_args_t;
@@ -61,6 +67,16 @@ bool timer_callback(struct repeating_timer *timer);
 
 int main(void)
 {
+
+    /* stdio init to unlock serial monitor */
+    stdio_init_all();
+
+#ifdef __DEBUG__
+    sleep_ms(5000);
+    printf(" ... START BOOTING ...\n");
+#endif 
+
+
     /* init dtc varables */
     app_dtc_conditions_t app_conditons;
     modules_dtc_values_t dtc_modules;
@@ -89,14 +105,6 @@ int main(void)
 
     datetime_t rtc_temp_sensor = {0};
     datetime_t rtc_kl15 = {0};
-
-    /* stdio init to unlock serial monitor */
-    stdio_init_all();
-
-#ifdef __DEBUG__
-    sleep_ms(1000);
-    printf(" ... START BOOTING ...");
-#endif 
 
     /* gpio init with dtc check */
     DigitalSignal gpio_debug_led(DEBUG_GPIO, GPIO_OUT, LOW, false);
@@ -140,7 +148,9 @@ int main(void)
         rtc for time read task + dtc condition sensors
         dtc conditions referance + lamp reference for check condition task
     */
+    unsigned char sensor_time = 0;
     temp_task_args_t args_temp_task;
+    args_temp_task.ref_sensor_time  = &sensor_time;
     args_temp_task.ref_sensor       = &temp_sensor;
     args_temp_task.ref_dtc_app      = &app_conditons;
     args_temp_task.ref_rtc_sensor   = &rtc_temp_sensor;
@@ -168,6 +178,11 @@ int main(void)
     if(!return_check)
         dtc_modules.task_dtc_value = Tasks.get_dtc();
     
+
+
+    #ifdef __DEBUG__
+        sleep_ms(1000);
+    #endif
     /* drive debug led */
     bool value_gpio_debugg = true;
     if(!gpio_debug_led.drive_gpio(value_gpio_debugg))
@@ -223,6 +238,26 @@ halt:
     
     while (true)
     {
+
+        #ifdef __DEBUG__
+            printf("--- MAIN IS RUNNING ---\n");
+            #ifdef __DEBUG_DTC_RUNNING__
+                printf(">> MODULES DTC AT RUNNING: \n");
+                printf("\t-> GPIO Debug DTC: %x\n", dtc_modules.gpio_dtc_value_debug);
+                printf("\t-> GPIO KL15  DTC: %x\n", dtc_modules.gpio_dtc_value_kl15);
+                printf("\t-> GPIO VSS   DTC: %x\n", dtc_modules.gpio_dtc_value_vss);
+                printf("\t-> GPIO LAMP  DTC: %x\n", dtc_modules.gpio_dtc_value_lamp);
+                printf("\t-> TEMP SENS  DTC: %x\n", dtc_modules.temp_dtc_value);
+                printf("\t-> TASK SCH   DTC: %x\n", dtc_modules.task_dtc_value);
+            #endif
+            sleep_ms(500);
+        #endif
+
+        #ifndef __DEBUG__
+            sleep_ms(50);
+        #endif
+
+
         task_return_value = Tasks.execute_task(_taks_index_.task_index);
         if(task_return_value.done_execution != true)
         {
@@ -231,7 +266,8 @@ halt:
             //return 1;
         }
         value_gpio_debugg = !value_gpio_debugg; 
-        gpio_debug_led.drive_gpio(value_gpio_debugg);
+        if(!gpio_debug_led.drive_gpio(value_gpio_debugg))
+            dtc_modules.gpio_dtc_value_debug = gpio_debug_led.get_dtc();
         if(!kl15_flag)
         {
             rtc_temp_sensor = {0};
@@ -249,33 +285,55 @@ TaskScheguler_Status_t read_temp_task(void *args)
     TaskScheguler_Status_t ret_value;
     ret_value.done_execution = true;
     
+    datetime_t curent_time = {0};
+    unsigned delta_time = 0;
+
     temp_task_args_t * local_arguments = (temp_task_args_t *)args;
     /* read temp*/
     float temp_C = local_arguments->ref_sensor->ReadTempAsCelsius();
     
+    rtc_get_datetime(&curent_time);
+
+    if(curent_time.sec < local_arguments->ref_rtc_sensor->sec)
+        delta_time = (60 - local_arguments->ref_rtc_sensor->sec) + curent_time.sec;
+    else    
+    {
+        delta_time = (curent_time.sec - local_arguments->ref_rtc_sensor->sec);
+        if (curent_time.min != local_arguments->ref_rtc_sensor->min)
+            delta_time += __MIN_IN_SEC__;
+        if (curent_time.hour != local_arguments->ref_rtc_sensor->hour)
+            delta_time += __H_IN_SEC__;
+    }
+
+
     /* check temp value*/
     if(temp_C < TEMP_LOW_LIM)
     {
-        rtc_get_datetime(local_arguments->ref_rtc_sensor);
-        #ifdef __DEBUG__
-        printf("Low ");
-        #endif
+        *(local_arguments->ref_sensor_time) = *(local_arguments->ref_sensor_time) + delta_time;
     }
     else
     {
-        local_arguments->ref_rtc_sensor->hour   = 0;
-        local_arguments->ref_rtc_sensor->min    = 0;
-        local_arguments->ref_rtc_sensor->sec    = 0;
-    }    
-    /* change flag */
-    if(local_arguments->ref_rtc_sensor->sec >= TEMP_S_LOW)
+        /* Reseting last read fo the time */
+        // local_arguments->ref_rtc_sensor->hour   = 0;
+        // local_arguments->ref_rtc_sensor->min    = 0;
+        // local_arguments->ref_rtc_sensor->sec    = 0;
+        /* Reseting sensor time */
+        *(local_arguments->ref_sensor_time)     = 0;
+    }
+
+    if(*(local_arguments->ref_sensor_time) >= TEMP_S_LOW)
         local_arguments->ref_dtc_app->dtc_temp = true;
     else
         local_arguments->ref_dtc_app->dtc_temp = false;
 
 #ifdef __DEBUG__
     printf("Read Temperature: %.2f %d\n", temp_C, local_arguments->ref_dtc_app->dtc_temp);
+    printf("D_Time value:  %d [s]\n", delta_time);
+    printf("Time value:    %d [s]\n", *(local_arguments->ref_sensor_time));
+    printf("CS Time value: %d [s]\n", local_arguments->ref_rtc_sensor->sec);
 #endif
+    
+    *(local_arguments->ref_rtc_sensor) = curent_time;
 
     return ret_value;
 }
@@ -313,8 +371,10 @@ TaskScheguler_Status_t read_time_task(void *args)
         local_arguments->ref_dtc_app->dtc_vss = false;
 
 #ifdef __DEBUG__
-    printf("Switch DTC Task 2: %d %d\n",
-        local_arguments->ref_dtc_app->dtc_vss, local_arguments->ref_dtc_app->dtc_kl15);
+    printf("Switch DTC Task 2: VSS %d KL15 %d min %d:%d\n",
+        local_arguments->ref_dtc_app->dtc_vss, local_arguments->ref_dtc_app->dtc_kl15,
+        local_arguments->ref_rtc_kl15->min,
+        local_arguments->ref_rtc_kl15->sec);
 #endif
     return ret_value;
 }
@@ -327,6 +387,7 @@ TaskScheguler_Status_t check_DTC_task(void *args)
     dtc_check_task_args_t * local_arguments = (dtc_check_task_args_t *)args;
 
 #ifdef __DEBUG__
+    printf("LAMP THREAD CONDITIONS:");
     printf(">>Condition sensor %d\n", local_arguments->ref_dtc_app->dtc_temp);
     printf(">>Condition KL15   %d\n", local_arguments->ref_dtc_app->dtc_kl15);
     printf(">>Condition VSS    %d\n", local_arguments->ref_dtc_app->dtc_vss);
