@@ -1452,10 +1452,10 @@ pico-sdk/tools/clean:
 # All Build rule for target.
 CMakeFiles/DIAG.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/DIAG.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-CMakeFiles/DIAG.dir/all: DigitalSignals/CMakeFiles/DigitalSignals.dir/all
 CMakeFiles/DIAG.dir/all: TempSensor/CMakeFiles/TempSensor.dir/all
-CMakeFiles/DIAG.dir/all: ParmsBoard/CMakeFiles/Board.dir/all
 CMakeFiles/DIAG.dir/all: TaskScheguler/CMakeFiles/TaskScheguler.dir/all
+CMakeFiles/DIAG.dir/all: ParmsBoard/CMakeFiles/Board.dir/all
+CMakeFiles/DIAG.dir/all: DigitalSignals/CMakeFiles/DigitalSignals.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DIAG.dir\build.make CMakeFiles/DIAG.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Vlad\Documents\Diagnoza-project\Proiect-diagnoza-2023_2024\src\Dev\Code\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target DIAG"
